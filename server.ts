@@ -2,6 +2,8 @@ import express from "express"
 import dotenv from "dotenv"
 import cors from "cors"
 import createOpRouter from "./routers/op-router.js"
+import getOp from "./routers/op-router.js"
+
 
 
 dotenv.config()
@@ -11,7 +13,7 @@ server.use(cors())
 server.use(express.json())
 
 //routes
-server.use(createOpRouter)
+server.use(createOpRouter, getOp)
 
 
 

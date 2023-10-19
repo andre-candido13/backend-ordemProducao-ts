@@ -1,3 +1,4 @@
+import { QueryResult } from "pg";
 import { db } from "../database/database.js";
 
 
@@ -10,9 +11,16 @@ async function createOp (nome: string, quantidade: string, data_entrega: Date) {
 
 }
 
+    async function getOp () {
 
-const createOpRepository = {
-    createOp
+    const getOp: QueryResult = await db.query(`SELECT * FROM "produtos"`)
+        return getOp.rows
 }
 
-export default createOpRepository;
+
+const opRepository = {
+    createOp, 
+    getOp
+}
+
+export default opRepository;

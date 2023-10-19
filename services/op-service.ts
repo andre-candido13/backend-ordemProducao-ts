@@ -1,4 +1,5 @@
-import createOpRepository from "../repositories/op-repository.js";
+import opRepository from "../repositories/op-repository.js";
+
 
 
 
@@ -6,18 +7,26 @@ async function createOp (nome: string, quantidade: string, data_entrega: Date) {
 
 
 
-    const op = createOpRepository.createOp(nome, quantidade, data_entrega)
+    const op = opRepository.createOp(nome, quantidade, data_entrega)
         return op
 
 }
 
+async function getOp () {
 
+    const getOp = opRepository.getOp()
+        return getOp
 
-
-
-const createOpService = {
-    createOp
 }
 
 
-export default createOpService;
+
+
+
+const opService = {
+    createOp,
+    getOp
+}
+
+
+export default opService;
