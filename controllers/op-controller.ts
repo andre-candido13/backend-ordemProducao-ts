@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
-import createOpService from 'services/op-service';
+import createOpService from '../services/op-service.js';
 
 export async function createOp (req: Request, res: Response) {
 

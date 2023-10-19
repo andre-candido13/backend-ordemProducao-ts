@@ -1,4 +1,4 @@
-import { db } from "database/database";
+import { db } from "../database/database.js";
 
 
 
@@ -9,8 +9,6 @@ async function createOp (nome: string, quantidade: string, data_entrega: Date) {
     [nome, quantidade, data_entrega]);
 
 }
-
-
 
 
 const createOpRepository = {
