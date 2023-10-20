@@ -8,7 +8,6 @@ export async function createOp (req: Request, res: Response) {
 
     const { nome, quantidade, data_entrega } = req.body;
 
-
     try {
 
         await opService.createOp(nome, quantidade, data_entrega)
